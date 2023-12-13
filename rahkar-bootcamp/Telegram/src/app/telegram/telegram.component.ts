@@ -56,7 +56,7 @@ export class TelegramComponent {
 
     onSubmit(){
         this.Sendmsg();
-    // ? this.SendPhoto();
+        this.SendPhoto();
     }
   Sendmsg(){
     this.telegram.sendMassageToTelegram(this.chatids,this.form.value.massage)   //parss data directly from formbuilder
@@ -69,6 +69,6 @@ export class TelegramComponent {
     // photourl:`https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png`
    // }
   
-  return this.telegram.sendPhotoToTelegram(this.chatids,this.form.value.picurl)    //parss data directly from formbuilder
+  return this.telegram.sendPhotoToTelegram(this.chatids,this.form.value.picurl,this.form.value.picname)    //parss data directly from formbuilder
 }
 }
