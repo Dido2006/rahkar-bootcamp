@@ -23,6 +23,7 @@ export class TelegramComponent {
       form: FormGroup =this.formbuilder.group({
       massage:'',//['',Validators.required],
       picurl:'',
+      picname:'',
       btn:this.formbuilder.array([])
     });
     listFormatDecorator(list:any[]){
