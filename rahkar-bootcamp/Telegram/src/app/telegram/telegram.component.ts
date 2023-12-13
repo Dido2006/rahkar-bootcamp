@@ -18,7 +18,7 @@ export class TelegramComponent {
          private formbuilder:FormBuilder
     ){}
   ngOnInit(){
-  // this.addBox();
+   this.addBox();
     }
       form: FormGroup =this.formbuilder.group({
       massage:'',//['',Validators.required],
@@ -47,8 +47,8 @@ export class TelegramComponent {
 
     addBox(){//console.log(`addNewBox`);
       this.btn.push(this.formbuilder.group({
-       btnname:"",
-       btncode: ""
+        text:"",
+        callback_data: ""
      }))
      }
   removeBox(index:number){console.log(`remove`,index);

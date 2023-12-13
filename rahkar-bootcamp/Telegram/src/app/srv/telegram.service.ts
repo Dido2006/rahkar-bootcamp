@@ -16,7 +16,10 @@ export class telegramService {
   constructor(private http: HttpClient, private formbuilder: FormBuilder) {}
   mytelegramBotToken = '6873393931:AAF9kQ2j44Y3SPFNWPf_ymPS9xnOugVj-nU'; //my botToken On secend Line 
   mytelegramChatId = '6734453194';  //my Owne Id
-  sendMassageToTelegram(chat_id:number[], text: string,) {
+
+//8888888888888888888888888888888888888888888888888888888888888888
+
+   sendMassageToTelegram(chat_id:number[], text: string,) {
     chat_id.forEach(element => {
       var msg = {                //incapsolation data as {chatid:[chatid],text:[textmasage]} 
         chat_id: element,
