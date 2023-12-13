@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let a=[1,2,5,7,8,2,7,5,3,9,8,6,3,9]      
+    let temparray=a;
+    function DuplicateCounter(num,array) //this Fuction check for duplicat for  num in array and most repeat for each member
+    {
+    let repeat=0 //count of duplicated
+    for(let i=0;i<array.length;i++)
+        if(num===array[i]){
+            repeat++; // count duplicate
+         //   temparray.splice(i,1) //remove duplicate item for no more accurte 
+        }
+        return repeat
+    }
+    function ShowDuplicate(array)
+    {
+        console.log(`Enterd array member :${array}`);
+    
+    for(let i=0;i<temparray.length;i++)
+        {
+           // temparray.shift()
+        repeat=DuplicateCounter(array[i],temparray)
+        if(repeat>1){
+            console.log(`array member :${array[i]} ,count:${repeat}`);
+        }
+    }}
+  
+    ShowDuplicate(a)
+   </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+*{
+    direction: rtl;
+    color: darkblue;
+    
+}
+thead td{
+    color:white;
+    font-size: 19px;
+    background-color: rgb(33, 30, 236);
+}
+table, td,tr {
+
+    color: rgb(233, 27, 27);
+    border: 1px solid rgb(15, 10, 11);
+    text-align: center;
+}
+tfoot td{
+    color:white;
+    font-size: 19px;
+    background-color: rgb(64, 51, 122);
+    }
+table tr:first-child{
+    color:bisque;
+    background-color: rgba(82, 241, 109, 0);
+}
+table:{
+    color:bisque;
+    background-color: rgb(100, 113, 231);
+}

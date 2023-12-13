@@ -1,0 +1,53 @@
+<!-- <ul>
+  <li *ngFor="let item of todolist">{{item.taskname}}</li>
+  <ul>
+    <li *ngFor="let item of todolist" [ngClass]="{'complated':item.Finished}">{{item.taskname}}</li>
+  </ul> 
+  <li>Status - Task Title</li>
+  <li *ngFor="let item of todolist" [ngClass]="{'complated':item.Finished}">
+    <div>{{item.taskname}} <button (click)="OnClickDelete(item.taskid)">Delete</button>
+      <button (click)="OnClickComplated(item.taskid)">complated</button>
+    </div>
+  </li>
+</ul>   -->
+
+<!-- 
+
+<div class="divmain">
+  
+   <table class=".table-striped">
+     <tr>
+        <th colspan="3">List of Tasks To Do</th>
+       
+      </tr>
+      <tr *ngFor="let item of todolist" [ngClass]="{'complated':item.Finished}">
+        <td><button (click)="OnClickComplated(item.taskid)">complated</button></td>
+        <td><button (click)="OnClickDelete(item.taskid)">Delete</button></td>
+        <td>{{item.taskname}}</td>
+      </tr>
+    </table> 
+  </div>
+  <input type="text" (input)="OnTypeEvent($event)" (keyup.enter)="OnClickAdd()" placeholder="Enter What you Want to do here" [value]="taskname" >
+  <button (click)="OnClickAdd()" >Add</button>
+   -->
+<!--   
+ <div class= "col-6 bg-success  " >
+  bg-s
+</div>
+<div class= "col-6 bg-ng s  " >
+  bg-s
+</div> -->
+
+<!-- <Form [formGroup]="form" class="form-control form-control-lg bg-success">
+  <input type="text" formControlName="name" />
+  <input type="password" formControlName="password" />
+  <button (click)="OnClick()">Send</button>
+</Form>
+<Form [formGroup]="form" class="form-control form-control-lg bg-success">
+  <input type="text" formControlName="name" />
+  <input type="password" formControlName="password" />
+  <button (click)="OnClick()">Send</button>
+</Form> -->
+
+<app-navbar></app-navbar>
+<router-outlet> </router-outlet>

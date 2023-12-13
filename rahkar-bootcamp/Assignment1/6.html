@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Greatest common divisor by while loop  
+        function gcd(max,min)
+        {
+ // xchange min, max to be like there name ,I konw this is diffcult to read but it's for less useage of memory      
+        if(min>max)
+           { max , min= min , max;}
+    var temp;
+        while(max%min!=0)
+        {
+            temp=max%min
+            max=min;
+            min=temp;
+        }
+          return min;
+        }
+ console.log("Function One Uses While loop to Calculate Greatest common divisor between given numbers :",gcd(25,35))
+//  Greatest common divisor by for loop
+function gdcnew(max,min)
+{
+    // xchange min, max to be like there name ,I konw this is diffcult to read but it's for less useage of memory  
+    if(min>max)
+           { max , min= min , max;}
+    
+    for(let temp=min; max%min!=0;temp=max%min){
+      
+        temp=max%min;
+        max=min;
+        min=temp;
+    }
+return min
+}
+console.log("Function Two Uses For loop to Calculate Greatest common divisor between given numbers :",gdcnew(240,24))
+</script>
+ </body>
+</html>

@@ -1,0 +1,25 @@
+// .divmain{
+//     width: 300px;
+// }
+
+.notcomplate{
+    list-style-type:none;
+}
+.complated{
+    list-style-type:lower-greek;
+    text-decoration: line-through;
+    background-color: green;
+}
+table{
+direction: rtl;
+width: 100%;
+height: auto;
+}
+input{
+    width:300px;
+}
+.divmain{
+    width: 300px;
+    display: flex;
+    
+}

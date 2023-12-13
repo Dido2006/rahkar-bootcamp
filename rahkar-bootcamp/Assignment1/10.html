@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // special numbers that it parts are like this [abc] => a^3+b^3+c^3 == abc
+function  specialnum(num)
+{
+    temp=num
+     var a,b,c
+     c=temp%10 ;
+     temp=(temp-c)/10
+     b= temp%10
+     temp=(temp-b)/10
+     a=temp%10
+     if((Math.pow(a,3)+Math.pow(b,3)+Math.pow(c,3))==num)
+        console.log(num)
+    }
+for (let i=100;i<=999;i++)
+    specialnum(i)
+
+
+    </script>
+</body>
+</html>

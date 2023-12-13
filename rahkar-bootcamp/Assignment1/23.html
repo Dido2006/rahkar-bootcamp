@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            function  nextdayCalender(inputDay)
+            {
+            let day=1
+            year=1402
+            nextDay=inputDay+1
+            if(nextDay<=31) //Farvardin
+            {
+                month=1
+                day=nextDay
+            }else if(nextDay<=62)//Ordibehesht
+            {
+                month=2
+                day=nextDay-31 
+            }else if(nextDay<=93)//Khordad
+            {
+                month=3
+                day=nextDay-62
+            }else if(nextDay<=124)//Tir
+            {
+                month=4
+                day=nextDay-93  
+            }else if(nextDay<=155)//Mordad
+            {
+                month=5
+                day=nextDay-124  
+            }else if(nextDay<=186)//sharivar
+            {
+                month=6
+                day=nextDay-155  
+            }else if(nextDay<=216)//Mehr
+            {
+                month=6
+                day=nextDay-186  
+            }else if(nextDay<=246)//Aban
+            {
+                month=8
+                day=nextDay-216
+            }else if(nextDay<=276)//Azar
+            {
+                month=9
+                day=nextDay-246 
+            }else if(nextDay<=306)//Day
+            {
+                month=10
+                day=nextDay-276  
+            }else if(nextDay<=336)//Bahman
+            {
+                month=11
+                day=nextDay-306  
+            }else if(nextDay<=365)//Esfand
+            {
+                month=12
+                day=nextDay-336  
+            }else if(nextDay==366)//1403
+            {
+                month=1
+                day=1 
+                year=1403
+            }
+            console.log(`${year}/${month}/${day}`);
+        }
+       nextdayCalender(124) //call Founction
+      </script>
+</body>
+</html>

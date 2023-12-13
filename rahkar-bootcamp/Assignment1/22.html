@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+
+          function  nextdayCalender(yyyy,mm,dd)
+          {
+            let newDD=dd //day
+            ,newMM=mm  //month
+            ,newYY=yyyy //year
+
+              if(mm <= 1 && mm > 7)  //  first six month with **** 31 Days peer month*****
+                         {
+                            if(dd==31)// is it a month last day for first six month wit **** 31 Days peer month*****
+                            { 
+                             newDD=1         //new month first day
+                             newMM=mm+1     //new month
+                            } else {
+                              newDD=dd+1  //simple current month next day
+                            } 
+               }else if(mm > 12 || (mm ==12 && dd < 29) ) // is it a month last day for first six month wit **** 30 Days peer month*****
+               {
+                            if(dd==30)
+                            {             // is it a month last day for first six month wit **** 30 Days peer month*****
+                             newDD=1         //new month first day
+                             newMM=mm+1     //new month
+                            } else {
+                              newDD=dd+1  //simple current month next day
+                            } 
+
+               }else{
+                    if(dd==29 && ((yyyy-1403)/5==0 ) ) //if curreny date is leap year day before last day 1403 is leap year leap year repeate period is 5 year
+                    {
+                       newDD=30 //leap year last day
+                       newMM=12
+                       newYY=yyyy
+                    }
+                    else{
+                        newDD=1
+                        newMM=1
+                        newYY=yyyy+1
+                       }
+                    }
+                console.log(`${newYY}/${newMM}/${newDD}`);
+               }
+
+        nextdayCalender(1370,12,29)
+        // nextdayCalender(1370,12,29)
+        // nextdayCalender(1402,11,30)
+        // nextdayCalender(1402,12,29)
+//          console.log(`${year}/${month}/${day}`);
+       
+   //   nextdayCalender(1376,1,5) //call Founction
+    </script>
+  </body>
+</html>

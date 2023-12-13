@@ -1,0 +1,18 @@
+<!-- <app-navbar></app-navbar> 
+<app-sidebar></app-sidebar> 
+ <p>Welcome</p>
+<app-new *ngIf="IsShown"></app-new> 
+<input type="text" (input)="ontype($event)">
+<button (click)="onClick($event)">Click Here</button> 
+{{Clickcounter}} -->
+<!-- <app-ca *ngIf="appear"></app-ca>
+<app-cb></app-cb>
+<app-cc></app-cc> -->
+<!-- [ngClass]="{'didit':item.Finished}" -->
+<ul>
+    <li *ngFor="let item of todolist" >{{item.title}}  </li>
+</ul>
+<input type="text" (input)="onchangegetdata($event)">
+<button (click)="onclick()">Add</button>
+<button (click)="onRemove()">Remove</button>
+<button (click)="ondid()">did</button>

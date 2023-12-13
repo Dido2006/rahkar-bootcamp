@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// even number in even position and even number in odd position
+function evenposition(num)
+{
+    var oddinodd="" ,oddineven=""
+    var countoddinodd=0,countoddineven=0;
+    var  str=String(num)
+
+    for(let i=0;i<str.length;i++)
+    {
+        if(i%2==0 && str[i]%2==0){
+            oddinodd+=str[i]
+            countoddinodd++
+        }
+
+        else if(i%2==1 && str[i]%2==0) 
+        {
+            oddineven+=str[i]
+            countoddineven++
+        }
+    }
+console.log("count odd in Odd Place:",countoddinodd)
+console.log("Odd in odd Place:",oddinodd)
+console.log("count odd in even Place:",countoddineven)
+console.log("Odd in Even Place:",oddineven)
+
+
+}
+evenposition(26121298488)
+
+    </script>
+</body>
+</html>

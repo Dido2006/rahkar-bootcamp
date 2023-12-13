@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<p>Factorial with two different way one With For command and other with recresive function watch the right click and select inspect and console tab </p>
+<body>
+    <script>
+        function factorialfor(n)
+       {
+           var fact =1
+           for(let i=1;i<=n;i++)
+            fact*=i    
+        return fact  
+       }
+       console.log("Calculated By For Command ,Factorial(5):",factorialfor(5))  
+     factorialfor(6)
+     function factorialrecersive(n)
+       { 
+        if(n>1) return n*factorialrecersive(--n)
+        else return 1;
+       }
+    console.log("Calculated By Recersive Function ,Factorial(5):",factorialrecersive(5))
+
+    </script>
+</body>
+</html>

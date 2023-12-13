@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    console.log("Count Passitive and Total Negative");
+ var inputs = [1,5,-6,5,-4];
+ console.log("inputs",inputs);
+ var TPossitive=0,TNegative=0,CPossitive=0,CNegative=0;
+
+ for(let i=0;i < inputs.length;i++)
+    if (inputs[i]>0)
+    {
+        TPossitive+=inputs[i]
+        CPossitive++
+    }else if(inputs[i]<0){
+        CNegative++;
+        TNegative+=inputs[i]
+
+    }
+    console.log("Count of Passitive Numbers :",CPossitive)
+    console.log("Total Passitive Numbers    :",TPossitive)
+    console.log("Count Negative Numbers are :",CNegative)
+    console.log("Total Negative Numbers  :",TNegative)
+</script>    
+</body>
+</html>
