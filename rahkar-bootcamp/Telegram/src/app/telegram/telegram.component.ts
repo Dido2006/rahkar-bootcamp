@@ -55,7 +55,7 @@ export class TelegramComponent {
    this.btn.removeAt(index);}
 
     onSubmit(){
-        this.Sendmsg();
+      //  this.Sendmsg();
         this.SendPhoto();
     }
   Sendmsg(){
