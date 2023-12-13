@@ -34,11 +34,12 @@ export class telegramService {
         });    
     }
 
-  sendPhotoToTelegram(chat_id:number[],photoUrl: string) {
+  sendPhotoToTelegram(chat_id:number[],photoUrl: string ,caption?: string) {
     chat_id.forEach(element => {
     const requestBody = {
     chat_id: element,
     photo: photoUrl,
+    caption: caption
   };
   
   this.http
