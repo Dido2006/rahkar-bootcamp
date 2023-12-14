@@ -30,9 +30,10 @@
       id="inputurl"
       type="آدرس کامل عکس دلخواه را جهت ارسال  وارد کنید "
        />
-       </div>
+       </div><label class="sr-only" for="inlineFormInputGroup"> تعداد ستونها</label>
+       </div><label class="sr-only" for="inlineFormInputGroup">   تعداد  سطر</label>
       <div class="col-auto">
-        <label class="sr-only" for="inlineFormInputGroup"> تعداد گزینه ها در هر سطر</label>
+        
         <div class="input-group mb-4">
           <div class="input-group-prepend">
             <!-- <div class="input-group-text">add</div>
@@ -40,24 +41,32 @@
           <input
             type="number"
             class="form-control"
+            formControlName="colnumber"
             id="inlineFormInputGroup"
-            placeholder="گزینه"
+            placeholder="ستون"
+          />
+          <input
+            type="number"
+            class="form-control"
+            formControlName="rownumber"
+            id="inlineFormInputGroup"
+            placeholder="سطر"
           />
         </div>
       </div>
       <div class="col-auto">
-        <button type="submit" class="btn btn-primary mb-2">Submit</button>
+        <button type="submit" class="btn btn-primary mb-2">Submit()</button>
       </div>
     </div>
  <div formArrayName="btn">
          <ng-container *ngFor="let item of btn.controls;let i=index;let first=first" [formGroupName]="i">
           <div>
-          <input type="text" formControlName="text" class="form-control col-3" [placeholder]="'یک متن برای گزینه '+[i+1]+' ربات وارد کنید'"> 
+            <input type="text" formControlName="text"  class="form-control col-3" [placeholder]="'یک متن برای گزینه '+[i+1]+' ربات وارد کنید'"> 
+            <input type="text" formControlName="callback_data" class="form-control col-3" [placeholder]="'یک کد عملکرد برای گزینه '+[i+1]+' ربات وارد کنید'"> 
           <span *ngIf="!first" (click)="removeBox(i)" class="input-group-text" id="basic-addon1"><i>-</i></span>
           <span *ngIf="first" (click)="addBox()" class="input-group-text" id="basic-addon1"><i></i>+</span>
         </div>
       </ng-container>
     </div>
-  </div>
   </form>
 </div>

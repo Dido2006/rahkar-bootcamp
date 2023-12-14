@@ -19,12 +19,12 @@ export class telegramService {
 
 //8888888888888888888888888888888888888888888888888888888888888888
 
-   sendMassageToTelegram(chat_id:number[], text: string,) {
+   sendMassageToTelegram(chat_id:number[], text: string,reply_markup:any) {
     chat_id.forEach(element => {
       var msg = {                //incapsolation data as {chatid:[chatid],text:[textmasage]} 
         chat_id: element,
         text: text,
-        reply_markup:{keyboard:[[{text:"BTN",callback_data:"btn"}],[{text:"BTN1",callback_data:"btn1"}]]}
+        reply_markup:{keyboard:reply_markup}
       
       };
       return this.http.post(

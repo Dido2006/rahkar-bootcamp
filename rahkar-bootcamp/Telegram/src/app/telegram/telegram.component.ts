@@ -24,25 +24,33 @@ export class TelegramComponent {
       massage:'',//['',Validators.required],
       picurl:'',
       picname:'',
+      rownumber: Number,
+      colnumber: Number,
       btn:this.formbuilder.array([])
+      
     });
     listFormatDecorator(list:any[]){
-      var finalArray:any=[]
+      this.btn.removeAt(0);// ngoinit made an emty item an it most be removed 
+
+      console.log(list);
+      
+      var arrayofarray:any=[]
+      
+      for (let i = 0; i < this.form.value.rownumber; i++) {
+        const rowArray = list.slice(i * this.form.value.colnumber, (i + 1) * this.form.value.colnumber);
+        arrayofarray.push(rowArray);
+      }
         list.forEach((btn,i) => {
-        finalArray.push(
+        arrayofarray.push(
           [
-            {text:btn.name,callback_data:btn.name}
+           {text:btn.name,callback_data:btn.name}
           ]
         )
   
       });
-      return finalArray;
-  
-    }
-
-
-
-    get btn():FormArray{
+      return arrayofarray;
+}
+get btn():FormArray{
       return this.form.get('btn') as FormArray;}
 
     addBox(){//console.log(`addNewBox`);
@@ -55,11 +63,14 @@ export class TelegramComponent {
    this.btn.removeAt(index);}
 
     onSubmit(){
-      //  this.Sendmsg();
-        this.SendPhoto();
+       this.Sendmsg();
+       this.SendPhoto();
+
     }
   Sendmsg(){
-    this.telegram.sendMassageToTelegram(this.chatids,this.form.value.massage)   //parss data directly from formbuilder
+    let btns=this.listFormatDecorator(this.btn.value)
+    console.log(btns);    
+   // this.telegram.sendMassageToTelegram(this.chatids,this.form.value.massage,btns)   //parss data directly from formbuilder
   }
   SendPhoto(){
   // var data={
@@ -69,6 +80,6 @@ export class TelegramComponent {
     // photourl:`https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png`
    // }
   
-  return this.telegram.sendPhotoToTelegram(this.chatids,this.form.value.picurl,this.form.value.picname)    //parss data directly from formbuilder
+ // return this.telegram.sendPhotoToTelegram(this.chatids,this.form.value.picurl,this.form.value.picname)    //parss data directly from formbuilder
 }
 }
