@@ -37,7 +37,7 @@ export class LoginComponent {
    onSubmitPlayer2(){
           console.log(this.player2Form.valid)
       if(this.player2Form.valid){
-          console.log(this.player1Form.value)
+          console.log(this.player2Form.value)
   }}
   
 }
