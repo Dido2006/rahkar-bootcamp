@@ -16,25 +16,26 @@
                   </div>
                 </div>
                 <div class="card-body">
-                  <form>
+                  <form [formGroup]="player1Form" (ngSubmit)="onSubmitPlayer1">
                     <div class="input-group form-group">
                       <div class="input-group-prepend">
                         <span class="input-group-text mx-2"><i class="fas fa-user"></i>User:</span>
                       </div>
-                      <input type="text" class="form-control" placeholder="username">
+                      <input type="text" class="form-control"  formControlName="userName" placeholder="username">
                       
                     </div>
                     <div class="input-group form-group">
                       <div class="input-group-prepend">
                         <span class="input-group-text  mt-2 mx-2 pt-2"><i class="fas fa-key">Password:</i></span>
                       </div>
-                      <input type="password" class="form-control mt-2" placeholder="password">
+                      <input type="password" class="form-control mt-2"  formControlName="password" placeholder="password">
                     </div>
                     <!-- <div class="row align-items-center remember">
                       <input type="checkbox">Remember Me
                     </div> -->
                     <div class="form-group">
-                      <input type="submit" value="Login" class="btn float-right login_btn mx-2 my-5">
+                    <!-- <button type="button" (click)="onSubmitPlayer1() ">cdsds</button> -->
+                      <input type="button" value="Login" (click)="onSubmitPlayer1()" class="btn float-right login_btn mx-2 my-5 col-2">
                     </div>
                   </form>
                 </div>
@@ -63,25 +64,25 @@
                   </div>
                 </div>
                 <div class="card-body">
-                  <form>
+                  <form [formGroup]="player2Form" (ngSubmit)="onSubmitPlayer2">
                     <div class="input-group form-group">
                       <div class="input-group-prepend">
                         <span class="input-group-text mx-2"><i class="fas fa-user"></i>User:</span>
                       </div>
-                      <input type="text" class="form-control" placeholder="username">
+                      <input type="text" class="form-control" formControlName="userName" placeholder="username">
                       
                     </div>
                     <div class="input-group form-group">
                       <div class="input-group-prepend">
                         <span class="input-group-text  mt-2 mx-2 pt-2"><i class="fas fa-key">Password:</i></span>
                       </div>
-                      <input type="password" class="form-control mt-2" placeholder="password">
+                      <input type="password" class="form-control mt-2"  formControlName="password" placeholder="password">
                     </div>
                     <!-- <div class="row align-items-center remember">
                       <input type="checkbox">Remember Me
                     </div> -->
                     <div class="form-group">
-                      <input type="submit" value="Login" class="btn float-right login_btn mx-2 my-5">
+                      <input type="submit" value="Login" (click)="onSubmitPlayer1()" class="btn float-right login_btn mx-2 my-5">
                     </div>
                   </form>
                 </div>
