@@ -44,21 +44,23 @@ export class telegramService {
     photo: photoUrl,
     caption: caption
   };
-  
-  this.http
+    console.log(`https://api.telegram.org/bot${this.mytelegramBotToken}/sendPhoto`,
+    requestBody);
+    
+    this.http
     .post(
       `https://api.telegram.org/bot${this.mytelegramBotToken}/sendPhoto`,
       requestBody
-    )
-    .subscribe(
-      (response) => {
-        console.log('Photo sent to Telegram successfully');
-      },
-      (error) => {
-        console.error('Error sending photo to Telegram:', error);
-      }
-    );
-  
-});
+      )
+      .subscribe(
+        (response) => {
+          console.log('Photo sent to Telegram successfully');
+        },
+        (error) => {
+          console.error('Error sending photo to Telegram:', error);
+        }
+        );
+        
+      });
+    }
   }
-}
