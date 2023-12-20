@@ -1,0 +1,17 @@
+
+let users =[];
+
+exports.PostLogin = (req,res,next) => {
+    // const{id}=req.params;
+    const{user}=req.query;
+
+    let findedUser= users.find((user)=>user.id==id);
+    if(!findedUser) ErrorHandler('user not found',res.next)
+    res.json({
+        books: []
+    })
+    findedUser= users.find((user)=>user.id==id);
+    // if(!findedUser) ErrorHandler('user not found',res.next)
+    res.json({: []
+    })
+}
