@@ -7,6 +7,7 @@ const users = [
   { username: 'player2', password: 'player2' }
 ]
 app.use(express.json())
+
 app.post('/login',(req,res)=>{
   const { username,password }=req.body 
 
