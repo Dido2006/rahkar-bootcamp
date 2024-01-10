@@ -9,6 +9,7 @@ const users = [
 app.use(express.json())
 
 app.post('/login',(req,res)=>{
+  console.log(req.body);
   const { username,password }=req.body 
 
   const foundUser=users.find(user=>user.username==username&&user.password==password)

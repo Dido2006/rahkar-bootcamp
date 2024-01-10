@@ -1,10 +1,8 @@
-export class Player{
-
-         userId!:number;
-         userName!:string
-         password!:string
-         score:number=0
-
+export class Player {
+    userId!: number;
+    userName!: string;
+    password!: string;
+    score: number = 0;
 }
 
 // export class Player{
