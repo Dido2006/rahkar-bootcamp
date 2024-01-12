@@ -1,0 +1,22 @@
+<div class="d-flex justify-content-center m-5">
+    <div class="col-lg-5">
+
+        <form [formGroup]="imageUploadForm" (ngSubmit)="onSubmit()">
+            <div class="row">
+
+                <input type="text" formControlName="title" placeholder="Enter title">
+            </div>
+            <div class="row">
+
+                <input type="file" formControlName="image" (change)="onFileSelected($event)"class="m-4">
+            </div>
+            <div class="row">
+
+                <button type="submit">Upload</button>
+            </div>
+        </form>
+        <img *ngIf="imageUploadForm.get('image')?.value" [src]="imageUploadForm.get('image')?.value" alt="Preview">
+
+    </div>
+</div>
+<!-- <img *ngIf="imageUploadForm.get('image').value" [src]="imageUploadForm.get('image').value" alt="Preview"> -->
