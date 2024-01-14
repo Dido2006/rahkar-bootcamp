@@ -10,7 +10,7 @@ const PORT=3000;
 app=express();
 app.use(express.json());
 app.use(cors());
-app.use("/images",savepic);
+app.use("/api",savepic);
 // app.use("/images/:title",loadpic);
 
 
