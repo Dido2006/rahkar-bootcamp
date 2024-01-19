@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "first-app-lesson-01": {
+    "first-app": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/first-app-lesson-01",
+            "outputPath": "dist/first-app",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -62,10 +62,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "first-app-lesson-01:build:production"
+              "buildTarget": "first-app:build:production"
             },
             "development": {
-              "buildTarget": "first-app-lesson-01:build:development"
+              "buildTarget": "first-app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -73,7 +73,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "first-app-lesson-01:build"
+            "buildTarget": "first-app:build"
           }
         },
         "test": {
